@@ -15,6 +15,19 @@ git config --list
 # 配置中还有--system和--local两个选项
 # --system生成配置到/etc/中
 # --local是在项目中的.git/config
+
+# 常用配置快捷键
+git config --global alias.st status = git st
+git config --global alias.co checkout = git co
+git config --global alias.ci commit = git ci
+git config --global alias.br branch = git br
+git config --global alias.un 'reset HEAD' = git un
+git config --global alias.last 'log -1' = git last
+# 使用git lg查看效果
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# 删除配置可以使用
+git config --global --unset alias.un
 ```
 
 更多关于git config的配置
@@ -75,11 +88,9 @@ gir rm -r --cached [dir]
 
 #### 分支管理
 
-Repeat Command中对Git的分支以及分支策略的描述已经很到位 . 
+Repeat Command中对Git的分支以及分支策略的描述已经很到位 .
 
 #### 解决冲突
 
 Repeat Command中对Git的解决冲突的流程描述已经很到位 .
-
-
 
