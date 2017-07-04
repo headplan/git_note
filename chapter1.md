@@ -94,3 +94,16 @@ Repeat Command中对Git的分支以及分支策略的描述已经很到位 .
 
 Repeat Command中对Git的解决冲突的流程描述已经很到位 .
 
+#### 其他命令
+
+```
+[git log]
+# 一行显示,时间轴
+git log --oneline
+git log --oneline --grahp
+# 也可以配置alias显示更友好的log
+# 还可以安装tig,显示更友好的log
+```
+
+
+
