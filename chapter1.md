@@ -50,13 +50,16 @@ git log
 # commit数不变
 ```
 
-**忽略文件**
+#### **忽略文件**
 
 这里指的就是.gitignore文件 , 添加到里面的文件就不会被加入到版本控制中 . 还可以在home下创建全局忽略.gitignore\_global
 
 ```
 *~
 .DS_Store
+# 还要添加到配置中
+[core]
+    excludesfile=/Users/headplan/.gitignore_global
 ```
 
 避免意外提交泄露信息等 .
@@ -69,4 +72,14 @@ gir rm -r --cached [dir]
 ```
 
 之后可以添加到ignore文件,或者物理删除文件,再commit即可.
+
+#### 分支管理
+
+Repeat Command中对Git的分支以及分支策略的描述已经很到位 . 
+
+#### 解决冲突
+
+Repeat Command中对Git的解决冲突的流程描述已经很到位 .
+
+
 
