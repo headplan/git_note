@@ -1,6 +1,6 @@
 # 快速应用
 
-Repeat Command中已经有了很详细的整理 , 这里只做补充说明 . 
+Repeat Command中已经有了很详细的整理 , 这里只做补充说明 .
 
 #### **配置Git**
 
@@ -48,6 +48,24 @@ git commit --amend
 # vim保存退出后,完成commit
 git log
 # commit数不变
+```
+
+**忽略文件**
+
+这里指的就是.gitignore文件 , 添加到里面的文件就不会被加入到版本控制中 . 还可以在home下创建全局忽略.gitignore\_global
+
+```
+*~
+.DS_Store
+```
+
+避免意外提交泄露信息等 . 
+
+这里用到一个删除命令 , 用来删除已经添加到版本控制中的文件或文件夹 , 对于将其添加到.gitignore之前很有用
+
+```
+gir rm --cached [file]
+gir rm -r --cached [dir]
 ```
 
 
