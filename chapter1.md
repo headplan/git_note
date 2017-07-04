@@ -59,7 +59,7 @@ git log
 .DS_Store
 ```
 
-避免意外提交泄露信息等 . 
+避免意外提交泄露信息等 .
 
 这里用到一个删除命令 , 用来删除已经添加到版本控制中的文件或文件夹 , 对于将其添加到.gitignore之前很有用
 
@@ -68,5 +68,5 @@ gir rm --cached [file]
 gir rm -r --cached [dir]
 ```
 
-
+之后可以添加到ignore文件,或者物理删除文件,再commit即可.
 
