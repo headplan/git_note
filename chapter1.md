@@ -94,7 +94,7 @@ Repeat Command中对Git的分支以及分支策略的描述已经很到位 .
 
 Repeat Command中对Git的解决冲突的流程描述已经很到位 .
 
-#### 其他命令
+#### 其他
 
 ```
 [git log]
@@ -108,8 +108,6 @@ git log --oneline --grahp
 Github
 Sourcetree
 ```
-
-
 
 
 
