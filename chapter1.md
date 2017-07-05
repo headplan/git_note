@@ -86,7 +86,31 @@ Repeat Command中对Git的解决冲突的流程描述已经很到位 .
 
 #### 储藏功能
 
-Repeat Command中对Git stash的流程描述已经很到位 . 
+Repeat Command中对Git stash的流程描述已经很到位 .
+
+#### git rebase
+
+和git merge一样都可以合并分支 , merge的意思是合并两个分支 , 即合并主分支和dev分支 , log会有记录merge . 而rebase是将分支合并到当前分支 , 就像在当前分支commit一样 , log里也不会记录有merge的痕迹 , 即让分支历史看起来像没有经过任何合并一样 . 
+
+```
+git rebase dev
+# 当然和merge一样,rebase也会产生冲突,解决方法是
+# (master) git rebase --skip # 意思是以dev的commit解决冲突
+# (master) git rebase --abort # 意思是保持不变,保留master的commit.
+
+# (master) git rebase --continue # 字面意思是跳过的意思
+# 这里产生跳过的方式是在git rebase dev发生冲突之后,修改缓存中的源码和dev相同,就会出现跳过的方式.
+# 会在.git中生成文件.git/rebase-apply
+# 之后再在master使用git rebase dev.会直接跳过
+# 如果修改冲突为master或者其他,则会生成两个commit,后一个为dev的commit,之后为HEAD的master的commit
+
+# rebase发生冲突后的流程
+(master) git rebase dev
+# (ba99d1f) 直接--skip或--abort
+(ba99d1f) 修改冲突
+(ba99d1f) git add . 
+(ba99d1f) git rebase --continue (会直接commit)
+```
 
 #### 其他
 
