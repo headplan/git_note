@@ -90,7 +90,7 @@ Repeat Command中对Git stash的流程描述已经很到位 .
 
 #### git rebase
 
-和git merge一样都可以合并分支 , merge的意思是合并两个分支 , 即合并主分支和dev分支 , log会有记录merge . 而rebase是将分支合并到当前分支 , 就像在当前分支commit一样 , log里也不会记录有merge的痕迹 , 即让分支历史看起来像没有经过任何合并一样 . 
+和git merge一样都可以合并分支 , merge的意思是合并两个分支 , 即合并主分支和dev分支 , log会有记录merge . 而rebase是将分支合并到当前分支 , 就像在当前分支commit一样 , log里也不会记录有merge的痕迹 , 即让分支历史看起来像没有经过任何合并一样 .
 
 ```
 git rebase dev
@@ -103,6 +103,7 @@ git rebase dev
 # 会在.git中生成文件.git/rebase-apply
 # 之后再在master使用git rebase dev.会直接跳过
 # 如果修改冲突为master或者其他,则会生成两个commit,后一个为dev的commit,之后为HEAD的master的commit
+# 总之都跳过了...
 
 # rebase发生冲突后的流程
 (master) git rebase dev
