@@ -5,4 +5,5 @@
   * [Git Submodule](chapter1/git-submodule.md)
   * [Git初始化参数](chapter1/gitchu-shi-hua-can-shu.md)
 * [Github](github.md)
+  * [常见问题](github/chang-jian-wen-ti.md)
 
